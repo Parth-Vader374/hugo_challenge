@@ -1,0 +1,24 @@
+{
+  "name": "hugo_challenge",
+  "version": "1.0.0",
+  "description": "At Hugo, customers often start the insurance application process on an external third party site, where that third party site then sends the collected information to our service so that the user can continue their application process and receive a price quote.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Parth-Vader374/hugo_challenge.git"
+  },
+  "author": "Parth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Parth-Vader374/hugo_challenge/issues"
+  },
+  "homepage": "https://github.com/Parth-Vader374/hugo_challenge#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.1.0"
+  }
+}
