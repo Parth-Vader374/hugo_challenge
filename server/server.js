@@ -1,17 +1,29 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const applicationRoutes = require("./routes/applicationRoutes");
+const helmet = require("helmet");
+const routes = require("../server/routes/insuranceRoutes");
 
 const app = express();
 
-// Middleware to parse JSON requests
-app.use(bodyParser.json());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        fontSrc: ["http://localhost:5000"],
+      },
+    },
+  })
+);
 
-// Routes
-app.use("/api/application", applicationRoutes);
+app.use(express.json());
 
-// Start the server
-const port = process.env.PORT || 5000;
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+app.use("/api", routes); // use the routes defined in the routes.js file
+
+// error handler middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something broke!");
 });
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

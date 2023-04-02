@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 
 function App() {
   // Testing connection to the node server.
   const [backEndData, setBackEndData] = useState([{}]);
 
   useEffect(() => {
-    fetch("/api/application")
+    fetch("/api/application/1")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Network response was not ok");
