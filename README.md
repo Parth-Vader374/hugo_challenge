@@ -44,10 +44,10 @@ Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
 ## Available Schemas
 
-`CREATE EXTENSION IF NOT EXISTS "uuid-ossp";`
+## `CREATE EXTENSION IF NOT EXISTS "uuid-ossp";`
 
 
-`CREATE TABLE personal_info (
+## `CREATE TABLE personal_info (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
   name TEXT NOT NULL,
   date_of_birth DATE NOT NULL
