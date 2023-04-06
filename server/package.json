@@ -19,6 +19,9 @@
   "homepage": "https://github.com/Parth-Vader374/hugo_challenge#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "mongodb": "^5.1.0"
+    "helmet": "^6.0.1",
+    "mongodb": "^5.1.0",
+    "pg": "^8.10.0",
+    "uuid": "^9.0.0"
   }
 }
