@@ -6,6 +6,7 @@ interface InputValidationInterface {
   validateVIN(vin: string): boolean;
   validateYear(year: string): boolean;
   validateModel(model: string): boolean;
+  validateDOB(dob: string): boolean;
   validateAddress(
     street: string,
     city: string,

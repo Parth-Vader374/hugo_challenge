@@ -4,14 +4,20 @@ import InputValidationInterface from "./InputValidationInterface";
 
 // Create the InputValidation object which implements the InputValidationinterface
 const InputValidation: InputValidationInterface = {
-  // Validates a string input that matches names which start with one or more letters,
-  // followed by zero or more occurrences of a space, apostrophe, comma, period, or hyphen
-  // followed by one or more letters.
+  // Validates a string input that matches names which start with one or more letters
   validateName(name: string): boolean {
     const nameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
     return nameRegex.test(name);
   },
 
+  // Validate the DOB to be at least 16 or older
+  validateDOB(dob: string): boolean {
+    const dobRegex =
+      /^(19[5-9]\d|20[0-2]\d)-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/;
+    return dobRegex.test(dob);
+  },
+
+  //matches alphanumeric characters spaces and punctuation marks
   validateModel(model: string): boolean {
     const modelRegex = /^[a-zA-Z0-9\s,'-]*$/;
     return modelRegex.test(model);

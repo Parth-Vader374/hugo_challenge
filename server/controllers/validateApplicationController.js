@@ -1,5 +1,4 @@
 const pool = require("../database/config");
-const { v4: uuidv4 } = require("uuid");
 
 const validateApplicationController = async (req, res, next) => {
   const applicationId = req.params.id;
