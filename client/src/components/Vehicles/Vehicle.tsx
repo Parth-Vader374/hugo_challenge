@@ -2,6 +2,7 @@
 
 import React from "react";
 import { VehicleInterface } from "./VehicleInterface";
+import "../../styles/vehicles.css";
 
 //the interface which describes properties the vehicle component will be expecting
 interface VehicleProps {
@@ -45,22 +46,22 @@ const Vehicle: React.FC<VehicleProps> = ({
   };
 
   return (
-    <div key={key}>
+    <div className="vehicle-form" key={key}>
       <h2>Vehicle {index + 1}</h2>
       <label>
-        Make:
+        Make
         <input type="text" value={vehicle.make} onChange={handleMakeChange} />
       </label>
       <label>
-        Model:
+        Model
         <input type="text" value={vehicle.model} onChange={handleModelChange} />
       </label>
       <label>
-        Year:
+        Year
         <input type="text" value={vehicle.year} onChange={handleYearChange} />
       </label>
       <label>
-        VIN:
+        VIN
         <input type="text" value={vehicle.VIN} onChange={handleVINChange} />
       </label>
       <button onClick={handleRemoveClick}>Remove Vehicle</button>

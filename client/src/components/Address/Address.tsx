@@ -1,6 +1,6 @@
 import React from "react";
 import { AddressInterface } from "./AddressInterface";
-
+import "../../styles/address.css";
 interface AddressProps {
   address: AddressInterface;
   onAddressChange: (address: AddressInterface) => void;
@@ -13,8 +13,8 @@ const Address: React.FC<AddressProps> = ({ address, onAddressChange }) => {
   };
 
   return (
-    <>
-      <label htmlFor="street">Street:</label>
+    <div className="address-form">
+      <label htmlFor="street">Street</label>
       <input
         type="text"
         id="street"
@@ -23,7 +23,7 @@ const Address: React.FC<AddressProps> = ({ address, onAddressChange }) => {
         onChange={handleInputChange}
       />
 
-      <label htmlFor="city">City:</label>
+      <label htmlFor="city">City</label>
       <input
         type="text"
         id="city"
@@ -32,7 +32,7 @@ const Address: React.FC<AddressProps> = ({ address, onAddressChange }) => {
         onChange={handleInputChange}
       />
 
-      <label htmlFor="state">State:</label>
+      <label htmlFor="state">State</label>
       <input
         type="text"
         id="state"
@@ -41,7 +41,7 @@ const Address: React.FC<AddressProps> = ({ address, onAddressChange }) => {
         onChange={handleInputChange}
       />
 
-      <label htmlFor="zipCode">Zip Code:</label>
+      <label htmlFor="zipCode">Zip Code</label>
       <input
         type="text"
         id="zipCode"
@@ -49,7 +49,7 @@ const Address: React.FC<AddressProps> = ({ address, onAddressChange }) => {
         value={address.zipCode}
         onChange={handleInputChange}
       />
-    </>
+    </div>
   );
 };
 

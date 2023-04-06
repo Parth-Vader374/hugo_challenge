@@ -1,0 +1,22 @@
+.address-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.address-form label {
+  display: block;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.address-form input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}

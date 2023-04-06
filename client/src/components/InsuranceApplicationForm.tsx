@@ -4,6 +4,7 @@ import Vehicle from "./Vehicles/Vehicle";
 import InputValidation from "./InputValidation/InputValidation";
 import { AddressInterface } from "./Address/AddressInterface";
 import { VehicleInterface } from "./Vehicles/VehicleInterface";
+import "../styles/InsuranceApplicationForm.css";
 
 const InsuranceApplicationForm: React.FC = () => {
   const [applicantName, setApplicantName] = useState("");
@@ -170,11 +171,11 @@ const InsuranceApplicationForm: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className="insurance-application-form">
       <h1>Insurance Application</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          Applicant Name:
+          Name
           <input
             type="text"
             value={applicantName}
@@ -183,7 +184,7 @@ const InsuranceApplicationForm: React.FC = () => {
         </label>
 
         <label>
-          Applicant DOB:
+          Date of Birth (YYYY-MM-DD)
           <input
             type="text"
             value={applicantDOB}
