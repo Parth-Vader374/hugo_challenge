@@ -86,3 +86,12 @@ Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
   FOREIGN KEY (vehicle_id) REFERENCES vehicles (id)
 );`
 
+# DB Connection Test 
+
+In the `server/database/config.js` file, update according to your credentials...
+
+### cd server/database/dbTest.js
+
+### node dbTest.js
+
+If succesful, you're ready to rock and roll! 
