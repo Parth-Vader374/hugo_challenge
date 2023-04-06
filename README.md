@@ -42,7 +42,7 @@ Open [http://localhost:5000](http://localhost:5000) to view it in the browser.
 
 # DB Setup using Postgres
 
-## Available Schemas
+## Create below Schemas
 
 ### `CREATE EXTENSION IF NOT EXISTS "uuid-ossp";`
 
